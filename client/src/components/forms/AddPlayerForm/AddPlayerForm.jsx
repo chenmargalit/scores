@@ -20,13 +20,16 @@ const AddPlyaerForm = () => {
   });
 
   useEffect(() => {
-    async function getScoresData() {
-      let scoresData = await axios.get(`${BASE_URL}/scores/get-scores`);
+    getScoresData();
+  }, []);
+
+  const getScoresData = async () => {
+    let scoresData = await axios.get(`${BASE_URL}/scores/get-scores`);
+    if (scoreData && Array.isArray(scoresData.data)) {
       scoresData = scoresData.data.sort((a, b) => b.score - a.score);
       setDbScoresData(scoresData);
     }
-    getScoresData();
-  }, []);
+  };
 
   const handleForm = e => {
     return setScoreData({ ...scoreData, [e.target.name]: e.target.value });
@@ -56,11 +59,8 @@ const AddPlyaerForm = () => {
       }
     }
     if (!validationFailed) {
-      const addDataResult = await axios.post(
-        `${BASE_URL}/scores/create-score`,
-        scoreData
-      );
-      console.log('add data result', addDataResult.data);
+      await axios.post(`${BASE_URL}/scores/create-score`, scoreData);
+      getScoresData();
     }
   };
 
