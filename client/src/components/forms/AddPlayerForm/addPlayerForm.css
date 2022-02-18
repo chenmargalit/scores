@@ -1,0 +1,39 @@
+.add-player-form__input {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid lightgray
+}
+
+.add-player-form__button {
+    color: purple;
+    background: none;
+    padding: 1em 1.5em;
+    cursor: pointer;
+
+}
+
+.add-player-form__button:active {
+    transform: scale(.9);
+    transition: all .2s;
+}
+
+.add-player-form__warning-text {
+    color: red;
+}
+
+.one-row-div {
+    display: flex;
+}
+
+table {
+    border: 1px solid black;
+}
+
+
+
+td {
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 5em;
+
+}
