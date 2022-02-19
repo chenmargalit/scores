@@ -1,13 +1,11 @@
 import pg from 'pg';
 
-// not in ENV for making the project transfer easier.
-
 const pgClient = new pg.Client({
-  user: 'postgres',
-  host: 'postgres',
-  database: 'edgify',
-  password: 'postgres',
-  port: 5432
+  user: process.env.POSTGRES_USER,
+  host: process.env.POSTGRES_HOST,
+  database: process.env.POSTGRES_DB,
+  password: process.env.POSTGRES_PASSWORD,
+  port: process.env.POSTGRES_PORT
 });
 
 pgClient.connect();
