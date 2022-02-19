@@ -15,3 +15,10 @@ You should now be able to run the project on localhost:3000.
 5. In another terminal, while inside the client folder type: "yarn install && yarn start"
 
 ### * Please note the DB has to run before the server does.
+
+
+##### Attention
+Please note there are many things missing on the design/ux/ui as I did not redeem them as part of the requirements. For example:
+1. Not presenting errors originating in the backend.
+2. You cant edit a name, only the score. If you choose another name for an existing ID, only the score will change. 
+3. Many others :)
