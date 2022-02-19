@@ -3,7 +3,8 @@
 Clone the repo
 
 #### Initialization with Docker:
-while in the project root folder, activate Docker and type in the command: "docker-compose up". 
+In the project root folder, activate Docker and type in the command: "docker-compose up". 
+You should now be able to run the project on localhost:3000. 
 
 
 #### Initialization without Docker:
